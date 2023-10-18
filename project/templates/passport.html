@@ -1,0 +1,19 @@
+<!-- templates/passport.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ student_name }}'s Passport</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="passport">
+        <h2>{{ student_name }}'s Passport</h2>
+        <p><strong>Student ID:</strong> {{ student_id }}</p>
+        <p><strong>Date of Birth:</strong> {{ date_of_birth }}</p>
+        <p><strong>Nationality:</strong> {{ nationality }}</p>
+    </div>
+</body>
+</html>
