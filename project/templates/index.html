@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Student Attendance</title>
+</head>
+<body>
+    <h1>Student Attendance</h1>
+    <form action="/mark_attendance" method="post">
+        <label for="student_name">Student Name:</label>
+        <input type="text" id="student_name" name="student_name" required><br>
+        <label for="attendance_status">Attendance Status:</label>
+        <select id="attendance_status" name="attendance_status" required>
+            <option value="present">Present</option>
+            <option value="absent">Absent</option>
+        </select><br>
+        <button type="submit">Mark Attendance</button>
+    </form>
+    <h2>Attendance List</h2>
+    <ul>
+        {% for student, status in students.items() %}
+            <li>{{ student }} - {{ status }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
